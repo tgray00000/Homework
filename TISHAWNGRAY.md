@@ -1,6 +1,13 @@
-tishawn
+# TiShawn
+<br>
+ I am currently living in San Antonio TX
+<br>
 complete the course
+<br>
 gain a new set of skills
+<br>
+Add some networking contacts
+<br>
 step into a new career upon completing the course
 <br>
 https://www.infoworld.com/article/3204016/what-is-python-powerful-intuitive-programming.html
