@@ -1,0 +1,217 @@
+-- 1.1
+-- SELECT Accel
+-- FROM evcars
+-- 
+-- 1.2
+-- rtrim(accel, 'sec') as m_accel
+-- 
+-- 
+-- 1.3 
+-- SELECT Accel as O_accel, 
+-- rtrim(accel, 'sec') as m_accel
+-- FROM evcars
+-- 
+-- 1.4
+-- UPDATE evcars
+-- SET Accel = rtrim(accel, 'sec')
+-- 
+-- 1.5
+-- SELECT Accel
+-- FROM evcars
+-- 
+-- 1.6
+-- ALTER TABLE evcars
+-- RENAME Accel to AccelSec
+-- 
+-- Section 2
+-- 
+-- 2.1
+-- SELECT TopSpeed
+-- FROM evcars
+-- 
+-- 2.2
+-- rtrim(TopSpeed, 'km/h')
+-- 
+-- 2.3
+-- SELECT TopSpeed as O_Top, 
+-- rtrim(TopSpeed, 'km/h') as m_Top
+-- FROM evcars
+-- 
+-- 2.4
+-- UPDATE evcars
+-- SET TopSpeed = rtrim(TopSpeed, 'km/h')
+-- 
+-- 2.5
+-- SELECT TopSpeed
+-- FROM evcars
+-- 
+-- 2.6
+-- SELECT TopSpeed,
+-- round(TopSpeed * 0.621371, 1)
+-- FROM evcars;
+-- UPDATE evcars
+-- SET TopSpeed = round(TopSpeed * 0.621371, 1)
+-- 
+-- 2.7
+-- ALTER TABLE evcars
+-- RENAME TopSpeed to TS_MPH
+-- 
+-- 2.8
+-- SELECT *
+-- FROM evcars
+-- 
+-- Section 3
+-- 
+-- 3.1
+-- SELECT Range
+-- FROM evcars
+-- 
+-- 3.2
+-- rtrim(Range, 'km')
+-- 
+-- 3.3
+-- SELECT Range as O_Range, 
+-- rtrim(Range, 'km') as m_Range
+-- FROM evcars
+-- 
+-- 3.4
+-- UPDATE evcars
+-- SET Range = rtrim(Range, 'km')
+-- 
+-- 3.5
+-- SELECT Range
+-- FROM evcars
+-- 
+-- 3.6
+-- SELECT Range,
+-- round(Range * 0.621371, 1)
+-- FROM evcars;
+-- UPDATE evcars
+-- SET Range = round(Range * 0.621371, 1)
+-- 
+-- 3.7
+-- ALTER TABLE evcars
+-- RENAME Range to RangeMiles
+-- 
+-- 3.8
+-- SELECT *
+-- FROM evcars
+-- 
+-- Section 4
+-- 
+-- 4.1
+-- SELECT Efficiency, FastCharge
+-- FROM evcars
+-- 
+-- 4.2
+-- rtrim(Efficiency, 'Wh/km')
+-- rtrim(FastCharge, 'km/h')
+-- 
+-- 4.3
+-- SELECT FastCharge as O_Fast, 
+-- rtrim(FastCharge, 'km/h') as m_Fast,
+-- Efficiency as o_Eff,
+-- rtrim(Efficiency, 'Wh/km') as m_Eff
+-- FROM evcars
+-- 
+-- 4.4
+-- UPDATE evcars
+-- SET FastCharge = rtrim(FastCharge, 'km/h'),
+-- Efficiency = rtrim(Efficiency, 'Wh/km')
+-- 
+-- 4.5
+-- SELECT FastCharge, Efficiency
+-- FROM evcars
+-- 
+-- 4.6
+-- SELECT FastCharge,
+-- round(FastCharge * 0.621371, 1)
+-- FROM evcars;
+-- UPDATE evcars
+-- SET FastCharge = round(FastCharge * 0.621371, 1)
+-- 
+-- 4.7
+-- ALTER TABLE evcars
+-- RENAME FastCharge to OneHRFastChargeMiles;
+-- 
+-- ALTER TABLE evcars
+-- RENAME Efficiency to EfficiencyWHperKM
+-- 
+-- 4.8
+-- SELECT *
+-- FROM evcars
+-- 
+-- Section 5
+-- 
+-- 5.1
+-- SELECT RapidCharge, count(*)
+-- FROM evcars
+-- GROUP by RapidCharge
+-- 
+-- 5.2
+-- UPDATE evcars
+-- SET RapidCharge = 'yes'
+-- WHERE RapidCharge like '%charging possible';
+-- 
+-- UPDATE evcars
+-- SET RapidCharge = 'no'
+-- WHERE RapidCharge like '% not possible';
+-- 
+-- SELECT RapidCharge
+-- FROM evcars
+-- 
+-- 5.3
+-- Type in answer
+-- 
+-- Section 6
+-- select DISTINCT PowerTrain
+-- FROM evcars
+-- 
+-- 6.1
+-- SELECT PowerTrain, count(*)
+-- FROM evcars
+-- GROUP by PowerTrain
+-- 
+-- 6.2
+-- Fill in blank
+-- 
+-- 6.3
+-- UPDATE evcars
+-- SET PowerTrain = 'AWD'
+-- WHERE PowerTrain like 'All%';
+-- 
+-- UPDATE evcars
+-- SET PowerTrain = 'RWD'
+-- WHERE PowerTrain like 'Rear%';
+-- 
+-- UPDATE evcars
+-- SET PowerTrain = 'FWD'
+-- WHERE PowerTrain like 'Front%';
+-- 
+-- SELECT PowerTrain, count(*)
+-- FROM evcars
+-- GROUP by PowerTrain
+-- 
+-- 6.4
+-- -- SELECT *
+-- -- FROM evcars
+-- 
+-- Section 7
+-- 
+-- 7.1
+-- SELECT PriceEuro, round(PriceEuro * 1.09, 2)
+-- FROM evcars
+-- 
+-- 7.2
+-- UPDATE evcars
+-- set PriceEuro = round(PriceEuro * 1.09, 2);
+-- 
+-- SELECT PriceEuro
+-- FROM evcars
+-- 
+-- 7.3
+-- ALTER TABLE evcars
+-- RENAME PriceEuro to USD;
+-- 
+-- SELECT *
+-- FROM evcars
